@@ -30,6 +30,7 @@ Using Vultr cloud infrastructure provider, deploy 2 windows server 2022 virtual 
 <br />
 <br />
 Create a firewall group as well as firewall rules to secure the deployed virtual machines:  <br/><br/>
+
 - <b>Step 1:</b> Navigate to Network, click on add firewall group.   <br/><br/>
 - <b>Step 2:</b> Create a firewall group name and add firewall group.   <br/><br/>
 - <b>Step 3:</b> Update inbound firewall rules to allow SSH and RDP connections from your ip address as shown below.   <br/><br/>
