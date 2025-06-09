@@ -1,5 +1,5 @@
 # Active Directory Splunk-lab-project
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745530316/qualys-628x353_a5j85o.avif" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Nessus"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745530316/qualys-628x353_a5j85o.avif" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <h1>Active directory splunk lab log project</h1>
 
 <h2>Description</h2>
@@ -11,23 +11,31 @@ The aim of this project is to simulate a real SOC environment through the genera
 <h2>Utilities Used</h2>
 
 - <b>Windows Server 2022 VMs</b>
-- <b>Remote desktop protocol</b>
 - <b>Ubuntu server VM</b>
+- <b>Remote desktop protocol</b>
 - <b>Splunk Enterprise Edition</b>
-- <b>Slack</b>
 - <b>Shuffle Automation</b>
+- <b>Slack</b>
+
 
 
 <Details>
-  <summary>Project walk-through:</summary>
+  <summary><h2>Project walk-through:</h2></summary>
 
-<p align="center">
-Go to the Qualys website, set up an account, download virtual scanner for Windows Hyper-V, and click on the start wizard below:   <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745529957/1_abs8ye.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+<p align="left">
+Using Vultr cloud infrastructure provider, deploy 2 windows server 2022 virtual machines and 1 Ubuntu server machine. <br/><br/>
+  
+- <b>Step 1:</b> Deploy 3 virtual machines in the same location as shown below   <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507186/ss4_jq9enz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Name the virtual scanner, select the virtualization platform (Hyper-v in this case) and select Next. After downloading the virtual scanner, proceed to create a new virtual machine in Hyper-v with specifications as show in the image below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745531509/2_yoaovl.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Create a firewall group as well as firewall rules to secure the deployed virtual machines:  <br/><br/>
+- <b>Step 1:</b> Navigate to Network, click on add firewall group.   <br/><br/>
+- <b>Step 2:</b> Create a firewall group name and add firewall group.   <br/><br/>
+- <b>Step 3:</b> Update inbound firewall rules to allow SSH and RDP connections from your ip address as shown below.   <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507186/ss5_ne5qtb.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507188/ss6_gstfro.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507188/ss7_pu9fhc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Start the virtual machine created with the virtual scanner vhdx file in Hyper-V and input the personalization code provided by Qualys for the scanner in the field highlighted below: <br/>
