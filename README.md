@@ -15,7 +15,7 @@ In this project, we will only be conducting a vulnerability assessments on a sin
 - <b>Ubuntu server VM</b>
 - <b>Splunk Enterprise Edition</b>
 - <b>Slack</b>
-- <b>Shuffler</b>
+- <b>Shuffle Automation</b>
 
 
 <Details>
