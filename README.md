@@ -3,8 +3,8 @@
 <h1>Active directory splunk lab log project</h1>
 
 <h2>Description</h2>
-It is important to conduct regular vulnerability assessments on hosts and virtual machines to be able to detect and patch detected vulnerabilities. This project provides a guide on how to conduct uncredentialed and credentialed vulnerability assessments on a Hyper-v Windows Virtual Machine as well as the differences in the scan results of the vulnerability assessment. Qualys is a vulnerability scanner used to scan for vulnerabilities in endpoints, operating systems, applications, cloud services, and other network resources.<br/> The difference between a credentialed and uncredentialed vulnerability scan is the level of detail and in-depth vulnerability analysis provided by a credentialed scan. It is important to conduct these credentialed vulnerability scans as often as possible to detect and patch any new vulnerability that may exist. <br/>
-In this project, we will only be conducting a vulnerability assessments on a single virtual machine, however the results of these assessments can be used to patch the endpoint hence making it more secure.
+This project aims to provide a walkthrough on configuring Active directory on Windows Servers 2022 vm, configuring domain controllers and joining the domain, installation of splunk forwarder on the Windows server virtual machines as well as installation of splunk enterprise indexer on the Ubuntu Virtual machine. The aim of the installation of the indexer and forwarders is to collect and aggregate logs from various endpoints to detect and triage events and incidents on these devices. In this project, we will be finetuning and using splunk queries to detect specific events in the virtual machines, using splunk queries to map IP addresses to their geolocation, generating alerts in splunk to detect these events as well as automation through the use of playbooks using shuffler and slack to improve MTTD and MTTR.  <br/>
+The aim of this project is to simulate a real SOC environment through the generation of Alerts by leaving RDP port open and using Splunk enterprise for the detection bruteforce and login attempts from malicious IP addresses on the internet.
 <br />
 
 
@@ -19,7 +19,7 @@ In this project, we will only be conducting a vulnerability assessments on a sin
 
 
 <Details>
-  <summary><h2>Project walk-through:</h2></summary>
+  <summary>Project walk-through:</summary>
 
 <p align="center">
 Go to the Qualys website, set up an account, download virtual scanner for Windows Hyper-V, and click on the start wizard below:   <br/>
