@@ -118,8 +118,14 @@ After restarting, I proceeded to create a new user in Active directory as shown 
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739408/ss39_emw1w3.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Go to Subscription IPs to include IPv4 address of the virtual machines to be scanned and click add as highlighted below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745554600/8_wtdp7o.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Log in to the Sam-TestMachine VM to rename the VM and add the server to the Domain:  <br/>
+- Go to This PC > Properties > Active directory users and computers. <br/><br/>
+- Rename this PC > Domain > Enter domain name. <br/><br/>
+- Enter Administrative username and password > Restart PC. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739409/ss40_m2cgvs.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739410/ss42_icdsuc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739411/ss43_caz6mm.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739411/ss44_bmmio2.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Go to Scans > Option Profiles to create Option profiles for the type of scan to be conducted Qualys as shown below then click save. In this case, we will be conducting an Uncredentialed scan which only scans open ports to detect vulnerabilities:  <br/>
