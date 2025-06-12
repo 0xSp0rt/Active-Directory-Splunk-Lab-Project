@@ -108,10 +108,14 @@ After installing the Active directory roles and features, I proceeded to promote
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739405/ss34_rbweeb.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-<br />
-<br />
-Go to assets, select Add IPs for scanning > New > IP Tracked addresses as shown below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745553197/7_pchzvt.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+
+After restarting, I proceeded to create a new user in Active directory as shown below:  <br/><br/>
+- Go to server manager > Tools > Active directory users and computers. <br/><br/>
+- Users > New > User. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739406/ss36_zqmams.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739408/ss37_qz1hvk.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739408/ss38_yyy6fz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739408/ss39_emw1w3.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Go to Subscription IPs to include IPv4 address of the virtual machines to be scanned and click add as highlighted below:  <br/>
