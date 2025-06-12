@@ -88,12 +88,26 @@ Log in to the Ubuntu server using ssh and ensure it is able to ping the Domain c
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss25_lsrm8o.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-After Personalization is complete, go back to the Qualys web console and click on check activation as shown below to verify Virtual scanner activation. Once activation is confirmed, click done as shown below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745553201/5_qquzwv.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Log in to the Sam-ADDS virtual machine using Remote desktop protocol and installed Active directory roles and features as shown below:  <br/><br/>
+- Go to server manager. <br/><br/>
+- Add roles and features. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss26_nqzrlx.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss27_ccapqq.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss28_cfbiio.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-To confirm virtual scanner has been connected to the web console, go to scans > appliances as shown in the images below and the virtual scanner should be displayed in the web console. We can then proceed to Assets as highlighted below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745553199/6_ijhlx5.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+After installing the Active directory roles and features, I proceeded to promote the Virtual machine to domain controller and created my domain:  <br/><br/>
+- Go to server manager > promote to domain controller. <br/><br/>
+- Add a New forest. <br/><br/>
+- Create a Password. <br/><br/>
+- Install and restart after installation. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734961/ss29_k4htkd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739404/ss31_uwmbnd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739404/ss32_nf550y.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739405/ss33_i0ihbf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739405/ss34_rbweeb.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<br />
+<br />
 <br />
 <br />
 Go to assets, select Add IPs for scanning > New > IP Tracked addresses as shown below:  <br/>
