@@ -61,17 +61,31 @@ Navigate to the Settings of each virtual machine, Select IPv4 > Enable VPC:  <br
 <br />
 <br />
 
-Navigate to the firewall settings of each virtual machine and update to the created firewall group as shown below:  <br/><br/>
+Assign static private ip addressing from the enabled VPC IP address to the windows server virtual machines:  <br/><br/>
 
-- Updating the firewall group of the virtual machine applies the inbound firewall rules created above to the deployed virtual machines. <br/><br/>
+- Go to Network connections > Internet Protocol Version 4. <br/><br/>
+- Assign the VPC cloud IP address to its respective virtual machine using 10.22.96.4 for the Domain controller as shown below. <br/><br/>
 
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507190/ss11_pgpxq5.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507191/ss13_himzet.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss19_vk2yay.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss20_tnminq.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss21_a9dq5t.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss22_feucg2.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Once personalization key has been entered, wait for the personalization process to be complete. LAN IP is displayed after personalization is completed as shown below:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745552375/4_b1zy9v.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Assign static private IP addressing from the enabled VPC IP address to the windows server test machine and using the private IP address of the domain controller as the DNS to enable the test machine to pull DNS records from the Domain controller virtual machine:  <br/><br/>
+
+- Go to Network connections > Internet Protocol Version 4. <br/><br/>
+- Assign the VPC cloud IP address to its respective virtual machine using 10.22.96.3 as the static IP address and 10.22.96.4 as the DNS server for the Test machine as shown below. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss24_lrmkxc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<br />
+<br />
+Log in to the Ubuntu server using ssh and ensure it is able to ping the Domain controller virtual machine:  <br/><br/>
+
+- ssh root @public IP address. <br/><br/>
+- ping private IP address of domain controller as shown below. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss17_z8a8nb.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss25_lsrm8o.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 After Personalization is complete, go back to the Qualys web console and click on check activation as shown below to verify Virtual scanner activation. Once activation is confirmed, click done as shown below:  <br/>
