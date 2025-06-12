@@ -23,7 +23,7 @@ The aim of this project is to simulate a real SOC environment through the genera
   <summary><h2>Project walk-through:</h2></summary>
 
 <p align="left">
-Using Vultr cloud infrastructure provider, deploy 2 windows server 2022 virtual machines and 1 Ubuntu server machine. <br/><br/>
+Using Vultr cloud infrastructure provider, deploy 2 windows server 2022 virtual machines and 1 Ubuntu server machine. One of the Windows server 2022 will serve as a Domain controller named "SamADDS", the second windows server will serve as a TestMachine and the Ubuntu server will serve as an Indexer for Splunk and named "SamSPLK" <br/><br/>
   
 - <b>Step 1:</b> Deploy 3 virtual machines in the same location as shown below   <br/><br/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507186/ss4_jq9enz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
@@ -39,8 +39,35 @@ Create a firewall group as well as firewall rules to secure the deployed virtual
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507188/ss7_pu9fhc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Start the virtual machine created with the virtual scanner vhdx file in Hyper-V and input the personalization code provided by Qualys for the scanner in the field highlighted below: <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745552377/3_b47k9j.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+
+Navigate to the firewall settings of each virtual machine and update to the created firewall group as shown below:  <br/><br/>
+
+- Updating the firewall group of the virtual machine applies the inbound firewall rules created above to the deployed virtual machines. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507190/ss11_pgpxq5.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507191/ss13_himzet.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss19_vk2yay.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<br />
+<br />
+
+Navigate to the Settings of each virtual machine, Select IPv4 > Enable VPC:  <br/><br/>
+
+- Enabling VPC assigns each virtual machine with a private ip address that allows for internal communication as shown in the last image below. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507192/ss15_yeesng.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507190/ss12_ecxcaq.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss18_rd69lx.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss16_n9cvlj.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<br />
+<br />
+
+Navigate to the firewall settings of each virtual machine and update to the created firewall group as shown below:  <br/><br/>
+
+- Updating the firewall group of the virtual machine applies the inbound firewall rules created above to the deployed virtual machines. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507190/ss11_pgpxq5.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749507191/ss13_himzet.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734959/ss19_vk2yay.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Once personalization key has been entered, wait for the personalization process to be complete. LAN IP is displayed after personalization is completed as shown below:  <br/>
