@@ -163,8 +163,15 @@ The next step would be to install splunk on the Ubuntu virtual machine to serve 
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111853/ss60.5_udguix.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-PS: Before the scan begins, it is important to disable the Windows defender firewall on the Windows device as shown below to allow for the scan to be conducted. The scan will be queued for a couple of minutes before it begins:   <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745556225/12_zp8rgs.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+To gain access to the splunk web interface on the local host, it is important to allow tcp on port 8000 on the ubuntu server and Vultr inbound firewall group rules as shown below:  <br/>
+
+- Go to the Vultr interface > Select the Ubuntu machine > Settings > Firewall. <br/><br/>
+- Go to inbound rules, allow TCP traffic for port 8000 and select "My IP" as source. <br/><br/>
+- SSH into the Ubuntu machine using command prompt and run the command "ufw allow 8000". <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111856/ss61_ek44pp.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750113935/ss62_vtkzbw.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111860/ss63_djcb5p.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Attached below is a result of the Uncredentialed scan detecting vulnerabilities in the Windows 10 VM on Hyper-V with a summary of 24 vulnerabilities discovered with a 3.0 severity level. Qualys allows for these results to be exported as PDF or XML for further analysis and documentation. <br/>
