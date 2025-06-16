@@ -174,8 +174,20 @@ To gain access to the splunk web interface on the local host, it is important to
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111860/ss63_djcb5p.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Attached below is a result of the Uncredentialed scan detecting vulnerabilities in the Windows 10 VM on Hyper-V with a summary of 24 vulnerabilities discovered with a 3.0 severity level. Qualys allows for these results to be exported as PDF or XML for further analysis and documentation. <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745556223/13_fw7tfb.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Gain access to the splunk web interface with the url provided and enter the created username and password during splunk installation to configure splunk and install required applications in Splunk:  <br/>
+**Note**: The reason for installing Splunk add on for Microsoft Windows is to allow us to be able to detect logged on or created users on the Windows machines. <br/>
+
+- Go to the splunk web interface > log in with username and password. <br/><br/>
+- Once logged in to the splunk dashboard, Go to Administrator > select Preferences > Change timezone to your preferred Timezone and save. <br/><br/>
+- Go to Dashboard, select Apps > Find more Apps > Search Splunk add on for Microsoft windows and install as shown below. <br/><br/>
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111862/ss64_as0rls.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111864/ss65_e7ed6n.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111866/ss66_ie2zg9.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111869/ss67_r2hdz9.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111870/ss68_ac2rzp.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111872/ss69_cio2ti.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111873/ss70_tdrpsg.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 </Details>
