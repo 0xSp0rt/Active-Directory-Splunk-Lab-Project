@@ -132,9 +132,17 @@ Log in to the Sam-TestMachine VM to rename the VM and add the server to the Doma
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739411/ss44_bmmio2.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Go to Scans > Option Profiles to create Option profiles for the type of scan to be conducted Qualys as shown below then click save. In this case, we will be conducting an Uncredentialed scan which only scans open ports to detect vulnerabilities:  <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745554598/9_bjyphu.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745554595/10_ljw1tv.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+Log in to the Sam-TestMachine VM with the newly created user account to enable remote desktop access:  <br/>
+
+- Sign in with newly created user. <br/><br/>
+- Go to Remote desktop settings > Show settings. <br/><br/>
+- Enter Administrative username and password. <br/><br/>
+- Allow enable remote desktop connection > Select Users > Ok. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739412/ss46_tuu9xr.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739413/ss48_bngi1v.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739414/ss49_cj4p2n.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739414/ss50_myw7ee.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111821/ss51_i1zkuf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 To begin scan, Go to scan on the web console > New > Scan > Give the scan a Title, choose an Option profile for the type of scan to be conducted, pick the virtual scanner for the scan, include IP addresses of the devices to be scanned and click Launch as shown below to begin the scan. <br/>
