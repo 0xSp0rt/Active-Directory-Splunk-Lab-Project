@@ -132,7 +132,7 @@ Log in to the Sam-TestMachine VM to rename the VM and add the server to the Doma
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739411/ss44_bmmio2.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Log in to the Sam-TestMachine VM with the newly created user account to enable remote desktop access:  <br/>
+Log in to the Sam-TestMachine VM with the newly created user account to enable remote desktop access. Enabling remote access allows us to remotely connect to the newly created user account using RDP:  <br/>
 
 - Sign in with newly created user. <br/><br/>
 - Go to Remote desktop settings > Show settings. <br/><br/>
@@ -145,8 +145,22 @@ Log in to the Sam-TestMachine VM with the newly created user account to enable r
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111821/ss51_i1zkuf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-To begin scan, Go to scan on the web console > New > Scan > Give the scan a Title, choose an Option profile for the type of scan to be conducted, pick the virtual scanner for the scan, include IP addresses of the devices to be scanned and click Launch as shown below to begin the scan. <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745554593/11_oeya4i.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+The next step would be to install splunk on the Ubuntu virtual machine to serve as the index:  <br/>
+
+- Using command prompt on local host, ssh into the ubuntu virtual machine. <br/><br/>
+- Run "sudo apt-get update && apt-get upgrade" to update the directories. <br/><br/>
+- run the command "wget -O with splunk indexer for ubuntu download link as shown in the image below" to download splunk. <br/><br/>
+- After download, change directory to the splunk folder on the ubuntu machine. <br/><br/>
+- Start splunk on the ubuntu machine using the command "./splunk start" . <br/><br/>
+- Accept the license agreement as shown below, create a username and password, and you will be provided with the splunk web interface url. <br/><br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111825/ss53_olkhwm.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111844/ss55_zitgtf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111846/ss56_cx3vrc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111848/ss57_a7ejxq.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111849/ss58_nwubk3.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111851/ss59_jo0rjy.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111855/ss60_nhpja9.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750111853/ss60.5_udguix.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 PS: Before the scan begins, it is important to disable the Windows defender firewall on the Windows device as shown below to allow for the scan to be conducted. The scan will be queued for a couple of minutes before it begins:   <br/>
