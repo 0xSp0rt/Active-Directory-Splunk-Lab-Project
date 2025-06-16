@@ -89,6 +89,7 @@ Log in to the Ubuntu server using ssh and ensure it is able to ping the Domain c
 <br />
 <br />
 Log in to the Sam-ADDS virtual machine using Remote desktop protocol and installed Active directory roles and features as shown below:  <br/><br/>
+
 - Go to server manager. <br/><br/>
 - Add roles and features. <br/><br/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749734960/ss26_nqzrlx.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
@@ -97,6 +98,7 @@ Log in to the Sam-ADDS virtual machine using Remote desktop protocol and install
 <br />
 <br />
 After installing the Active directory roles and features, I proceeded to promote the Virtual machine to domain controller and created my domain:  <br/><br/>
+
 - Go to server manager > promote to domain controller. <br/><br/>
 - Add a New forest. <br/><br/>
 - Create a Password. <br/><br/>
@@ -110,6 +112,7 @@ After installing the Active directory roles and features, I proceeded to promote
 <br />
 
 After restarting, I proceeded to create a new user in Active directory as shown below:  <br/><br/>
+
 - Go to server manager > Tools > Active directory users and computers. <br/><br/>
 - Users > New > User. <br/><br/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1749739406/ss36_zqmams.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
@@ -119,6 +122,7 @@ After restarting, I proceeded to create a new user in Active directory as shown 
 <br />
 <br />
 Log in to the Sam-TestMachine VM to rename the VM and add the server to the Domain:  <br/>
+
 - Go to This PC > Properties > Active directory users and computers. <br/><br/>
 - Rename this PC > Domain > Enter domain name. <br/><br/>
 - Enter Administrative username and password > Restart PC. <br/><br/>
