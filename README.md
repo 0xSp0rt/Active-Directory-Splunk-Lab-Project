@@ -224,6 +224,10 @@ To set up Splunk forwarders, Download and install the splunk dedicated forwarder
 - Select Username > Next. <br/><br/>
 - Input Private IP address of Indexer and Port 9997 for indexer > Next. <br/><br/>
 - Install > Enter administrative password. <br/><br/>
+- Go to Splunk forwarder default folder highlighted below > Copy iputs.conf file > Paste in Splunk system local folder. <br/><br/>
+- Open the inputs.conf file in local folder using Notepad > Ensure the WinEventlog highlighted below is false > Save. <br/><br/>
+- Go to Services > Splunk forwarder properties > log on > Local system account select > Apply. <br/><br/>
+- Restart Splunk forwarder properties. <br/><br/>
 The above steps will be repeated for the Domain controller windows server as well to enable forwarding of logs to the indexer.
 
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869003/ss80_qtujwy.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
@@ -233,18 +237,41 @@ The above steps will be repeated for the Domain controller windows server as wel
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869009/ss84_clbme8.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869010/ss85_yzjou1.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869011/ss86_tan6kr.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869013/ss87_xmykaf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869014/ss88_le9b8p.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869015/ss89_sybbvc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869016/ss90_wcbob4.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750870574/ss91_xqkqcf.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750870575/ss92_wxafym.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750870577/ss93_jk66ns.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750870578/ss94_zeh3sr.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Under Authentication > New > Operating systems (Select the required operating system of the devices which is Windows in this case) > Select record title and name it > Login Credentials and input the login credentials of the devices to be scanned as shown in the screenshots below > IPs (Input IPs of the device to be scanned) > Save:   <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597851/22_se44oe.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606407/23_bhvxrr.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/> 
+To generate Telemetry in Splunk, I proceeded to turn on RDP on the firewall and searched for unauthorized failed login attempts in Splunk: <br />
+
+- Go to the vultr firewall group and turn on RDP for all traffic. <br/><br/>
+- Go to splunk > Enter the Query highlighted below to detect failed login attempt with eventcode 4625. <br/><br/>
+- Go to Save > Save as ALert. <br/><br/>
+  
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872076/ss101.5fw_nlcntz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872077/ss102_nunbpg.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872079/ss103_izi1lp.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Go to Option profile > Select the previously created option profile as shown in the images below > Select Edit > Scroll to Authentication > Select Windows > leave the rest of the settings on default > Save > Go to Scans:  <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606403/24_ioquzt.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606399/25_eopvmq.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+After generating telemetry, I proceeded to create a dashboard to map failed unauthorized logins from malicious ip addresses to their geolocation: <br />
+
+- Go to Dashboard > Create New Dashboard. <br/><br/>
+- Create Dashboard title > Classic dashboards > Create. <br/><br/>
+- Add Panel > New > Chloropleth map > Enter highlighted search string to map ip to geolocation by country > Add to Dashboard. <br/><br/>
+**Note**: Using this search query and creating this dashboard allows us to be able map the malicious ip addresses to their geolocation by country. <br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872802/ss112_ewegle.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872826/ss113_cmsmbo.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872827/ss114_tchlh0.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872829/ss115_hrfzxt.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872830/ss116_d6nlmk.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>  
 <br />
 <br />
+
 Click New > Create Title > Fill as shown below > Include IP addresses (Of the devices that needs to be scanned) > Launch Scan. The result of the scan below indicates and shows a total of 382 confirmed vulnerabilities with an indepth look at the scan results showing vulnerabilities from Applications like Mozilla firefox and VLC media player as shown in the images below. <br />
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606395/26_drxqw5.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606391/27_lrrmsh.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
