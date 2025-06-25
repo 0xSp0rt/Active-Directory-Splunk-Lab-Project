@@ -271,13 +271,8 @@ After generating telemetry, I proceeded to create a dashboard to map failed unau
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750872830/ss116_d6nlmk.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>  
 <br />
 <br />
-
-Click New > Create Title > Fill as shown below > Include IP addresses (Of the devices that needs to be scanned) > Launch Scan. The result of the scan below indicates and shows a total of 382 confirmed vulnerabilities with an indepth look at the scan results showing vulnerabilities from Applications like Mozilla firefox and VLC media player as shown in the images below. <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606395/26_drxqw5.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745606391/27_lrrmsh.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<br />
-<br />
-<h3>Vulnerability Remediation</h3>
+</Details>
+<h3>Shuffler Automation</h3>
 An indepth analysis of the credentialed vulnerability scan results indicates that a lot of the vulnerabilities discovered had a severity level of 4 and 5, indicating their risk level and exploitability. Most of these vulnerabilities were from old versions of Mozilla firefox and VLC media player. To fix these vulnerabilities, we can either update these Applications to patch these vulnerabilities or uninstall these old versions to make the virtual machine more secure. <br />
 To patch these vulnerabilities and make the virtual machine more secure, we would be uninstalling the Mozilla firefox program as well as the VLC media player as shown in the images below to patch the vulnerabilities attached to those programs: <br />
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878474/ss53_mkme16.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
