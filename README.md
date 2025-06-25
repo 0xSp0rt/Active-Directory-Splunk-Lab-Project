@@ -275,21 +275,21 @@ After generating telemetry, I proceeded to create a dashboard to map failed unau
 <h3>Shuffler Automation</h3>
 An indepth analysis of the credentialed vulnerability scan results indicates that a lot of the vulnerabilities discovered had a severity level of 4 and 5, indicating their risk level and exploitability. Most of these vulnerabilities were from old versions of Mozilla firefox and VLC media player. To fix these vulnerabilities, we can either update these Applications to patch these vulnerabilities or uninstall these old versions to make the virtual machine more secure. <br />
 To patch these vulnerabilities and make the virtual machine more secure, we would be uninstalling the Mozilla firefox program as well as the VLC media player as shown in the images below to patch the vulnerabilities attached to those programs: <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878474/ss53_mkme16.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878479/ss55_y6wpoq.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878482/ss56_yrsbja.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878488/ss58_js92ki.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878491/ss59_urolxx.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874363/ss117_feynq1.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874365/ss118_ct24qs.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874367/ss119_gaoop6.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874368/ss120_e5ujix.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874370/ss121_hpi3bc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 After Uninstalling these programs as shown in the images above, The next step would be to relaunch the scan as shown below, include the IP address of the virtual machine to be scanned and await the results. <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878494/ss60_etj2su.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878496/ss61_ifmjhj.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874371/ss122_t4gd2o.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874373/ss123_acs3fd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 <h3>Post Remediation Scan Results</h3>
 The result of the scan after remediating the mozilla firefox and vlc media player vulnerabilities showed the following results. The scan results after remediation showed a reduction in the number of severe vulnerabilities compared to the results of the scan before remediation which is due to the removal of the firefox and vlc media player programs causing some of the vulnerabilities. The result of the post remediation scan shows 228 vulnerabilities detected compared to an initial 338 vulnerabilities detected before remediation. <br/ >
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878499/ss62_hczytw.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878499/ss62_hczytw.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 </Details>
