@@ -192,31 +192,47 @@ Gain access to the splunk web interface with the url provided and enter the crea
 <br />
 </Details>
 <Details>
-<summary><h3>Credentialed Scan</h3></summary>
-To conduct credentialed scans which allows for an indepth vulnerability scan of the virtual machine, It is important to make the following configurations with Services, Managed Advanced sharing settings, User account control settings. <br/>
-Go to my Services > Remote Registry properties > Change Startup Type to Automatic > Apply changes > Start the Service:   <br/>
-This allows for users to make changes to windows registry settings. <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597866/14_quldzn.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597864/15_odeiuu.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<br />
-<br />
-Right-click Server > Properties > Change Startup Type to Automatic > Apply Changes > Start Server. <br/>
-This allows file, print and sharing services over the network. <br/>
+<summary><h3>Splunk Set-up</h3></summary>
+To set up Splunk, it is important to create Indexes for required logs to be aggregated to. The setup also includes setting up forwarding ports as well as installation and configuration of splunk forwarders on required endpoints to forward logs to the indexer. <br/>
+  
+- Go to Settings in Splunk > Add data > Indexes. <br/><br/>
+- Save Indexes. <br/><br/>
 
-Go to Managed Advanced sharing settings > Turn on File sharing and Network discovery > Save Changes. <br/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867671/ss71_iycjyc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867671/ss72_cuhuuc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<br />
+<br />
+To configure forwarding and receiving ports. <br/>
 
-Go to User account control settings and apply the changes as shown below. <br/>
-This grants Qualys necessary permission to conduct an indepth scan. <br/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597863/16_bxwaph.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597860/17_e3hbwv.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597858/18_ku0bi1.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745597856/19_zbadkv.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+- Go to Settings in Splunk > Add data > Forwarding and receiving. <br/><br/>
+- Configure Receiving > New Receiving Port. <br/><br/>
+- Listen on Port 9997 > Save. <br/><br/>
+- Go to ubuntu server > run the command "ufw allow 9997"
+The above command allows for port 9997 to be open on the ubuntu server to allow for the server to listen on port 9997 for the forwarders.
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867671/ss73_qjuhac.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867672/ss74_luzzbe.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867674/ss75_thnlv7.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867675/ss76_otdmnv.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867675/ss77_jhoshp.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750867677/ss78_ulq9xr.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-Go to Windows registry directory highlighted below. Right-click and create a new 32 bit value > Create the Value name to LocalAccountTokenFilterPolicy > Change Value data to 1 as shown below then proceed back to the Qualys web console and go to Authentication as shown below: <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745603992/ss37_krjebp.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745604327/ss38_b68gub.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745605936/21_muqmix.png" height="80%" width="80%" alt="Vulnerability assessment on windows 10 host using Qualys"/>
+To set up Splunk forwarders, Download and install the splunk dedicated forwarders on every virtual machine that needs to forward its logs to the indexer: <br />
+
+- Start Universal forwarder setup > select on premise setup for on premise splunk set up > Next. <br/><br/>
+- Select Username > Next. <br/><br/>
+- Input Private IP address of Indexer and Port 9997 for indexer > Next. <br/><br/>
+- Install > Enter administrative password. <br/><br/>
+The above steps will be repeated for the Domain controller windows server as well to enable forwarding of logs to the indexer.
+
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869003/ss80_qtujwy.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869006/ss81_cg3mjl.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869007/ss82_q0r937.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869008/ss83_ejomdc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869009/ss84_clbme8.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869010/ss85_yzjou1.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750869011/ss86_tan6kr.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 Under Authentication > New > Operating systems (Select the required operating system of the devices which is Windows in this case) > Select record title and name it > Login Credentials and input the login credentials of the devices to be scanned as shown in the screenshots below > IPs (Input IPs of the device to be scanned) > Save:   <br/>
