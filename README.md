@@ -272,7 +272,8 @@ After generating telemetry, I proceeded to create a dashboard to map failed unau
 <br />
 <br />
 </Details>
-<h3>Shuffler Automation</h3>
+<Details>
+<summary><h3>Shuffler Automation</h3></summary>
 To improve MTTD and MTTR, It is important to incorporate Automation into this setup. This workflow aims to parse alerts from Splunk with a webhook and send those alerts as notifications into a dedicated slack channel and an email notification to disable the compromised user account in active directory. <br />
 
 - Go to Shuffler > Workflow > Create Workflow > Name workflow. <br/><br/>
@@ -289,15 +290,19 @@ To improve MTTD and MTTR, It is important to incorporate Automation into this se
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874373/ss123_acs3fd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
-After Uninstalling these programs as shown in the images above, The next step would be to relaunch the scan as shown below, include the IP address of the virtual machine to be scanned and await the results. <br />
+After Authenticating Slack, we proceed to create a Slack channel and configure Shuffler to send in the alerts to the created Slack channel. <br />
+
+- Go to Slack > Create Channel > Blank Channel > Channel name > Create Channel. <br/><br/>
+- Go to shuffler > select Slack > Select Find actions > Post a message. <br/><br/>
+- Under slack > Select Runtime arguement (to configure info to be sent through alerts). <br/><br/>
+- Go to slack > copy Channel ID > Post channel ID under Slack in Shuffler > Save. <br/><br/>
+- Run the workflow. **You should get a slack notification of your configured alert**. <br/><br/>
+- Go to Slack > Select Action Trigger > Select desired information to be sent using Runtime Parameters > Select mode of action(email or sms) > Enter desired Email address. <br/><br/>
+- Run the workflow and The email with the action trigger should be received. <br/><br/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874378/ss125_k3ds9l.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874380/ss126_nc8ont.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874382/ss127_db8oly.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874384/ss128_kdq7pu.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<br />
-<br />
-<h3>Post Remediation Scan Results</h3>
-The result of the scan after remediating the mozilla firefox and vlc media player vulnerabilities showed the following results. The scan results after remediation showed a reduction in the number of severe vulnerabilities compared to the results of the scan before remediation which is due to the removal of the firefox and vlc media player programs causing some of the vulnerabilities. The result of the post remediation scan shows 228 vulnerabilities detected compared to an initial 338 vulnerabilities detected before remediation. <br/ >
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874386/ss129_u4mxgz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874389/ss130_cvdhdd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967359/ss131_n5aqho.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
@@ -313,8 +318,7 @@ The result of the scan after remediating the mozilla firefox and vlc media playe
 <br />
 </Details>
 <h3>Summary</h3>
-The results of the multiple scans conducted as shown in the walkthrough above goes to show the importance of conducting a credentialed scan over a non credentialed scan as it gives Qualys the capability to perform an indepth scan to detect various CVEs that might exist on the host. The Post remediation scan results also show the effectiveness of Qualys in detecting patches that have been made after the inital scan. <br />
-Although this vulnerability management was conducted on a Hyper-v virtual machine in a smaller Home lab environment, It has a use case for enterprise environments where organizations have multiple virtual machines that needs to be scanned for vulnerabilities that might exist in the virtual environment before conducting patch management on these machines. It is advisable that vulnerability and patch management be conducted on a regular basis to detect new CVEs and keep the host machines as secure as possible.
+The result of this Splunk project allows us to be able to detect Alerts and improve response Time as well as MTTD by incorporating Automation, the use of alerts also saves man hours by avoiding the need for security operations center analysts to constantly search for alerts and be notified as soon as they occur in their environments. <br />
 
 </p>
 
