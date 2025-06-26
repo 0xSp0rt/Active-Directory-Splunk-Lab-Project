@@ -20,7 +20,7 @@ The aim of this project is to simulate a real SOC environment through the genera
 
 
 <Details>
-  <summary><h2>Project walk-through:</h2></summary>
+  <summary><h2>Virtual Machine Set-up walk-through:</h2></summary>
 
 <p align="left">
 Using Vultr cloud infrastructure provider, deploy 2 windows server 2022 virtual machines and 1 Ubuntu server machine. One of the Windows server 2022 will serve as a Domain controller named "SamADDS", the second windows server will serve as a TestMachine and the Ubuntu server will serve as an Indexer for Splunk and named "SamSPLK" <br/><br/>
