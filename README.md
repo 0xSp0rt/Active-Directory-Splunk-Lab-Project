@@ -1,5 +1,5 @@
 # Active Directory Splunk-lab-project
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745530316/qualys-628x353_a5j85o.avif" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750972688/SOC_project.drawio_kkb8v1.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <h1>Active directory splunk lab log project</h1>
 
 <h2>Description</h2>
