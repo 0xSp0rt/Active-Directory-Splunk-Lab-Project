@@ -273,18 +273,27 @@ After generating telemetry, I proceeded to create a dashboard to map failed unau
 <br />
 </Details>
 <h3>Shuffler Automation</h3>
-An indepth analysis of the credentialed vulnerability scan results indicates that a lot of the vulnerabilities discovered had a severity level of 4 and 5, indicating their risk level and exploitability. Most of these vulnerabilities were from old versions of Mozilla firefox and VLC media player. To fix these vulnerabilities, we can either update these Applications to patch these vulnerabilities or uninstall these old versions to make the virtual machine more secure. <br />
-To patch these vulnerabilities and make the virtual machine more secure, we would be uninstalling the Mozilla firefox program as well as the VLC media player as shown in the images below to patch the vulnerabilities attached to those programs: <br />
+To improve MTTD and MTTR, It is important to incorporate Automation into this setup. This workflow aims to parse alerts from Splunk with a webhook and send those alerts as notifications into a dedicated slack channel and an email notification to disable the compromised user account in active directory. <br />
+
+- Go to Shuffler > Workflow > Create Workflow > Name workflow. <br/><br/>
+- Grab webhook > Create Webhook Name > Copy Webhook Link. <br/><br/>
+- Go to Splunk saved alerts > edit > select Webhook > Paste webhook link > Save. <br/><br/>
+- Go to shuffler workflow > Drag slack into the workflow > Authenticate into your created Slack account. <br/><br/>
+
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874363/ss117_feynq1.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874365/ss118_ct24qs.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874367/ss119_gaoop6.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874368/ss120_e5ujix.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874370/ss121_hpi3bc.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874371/ss122_t4gd2o.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874373/ss123_acs3fd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 After Uninstalling these programs as shown in the images above, The next step would be to relaunch the scan as shown below, include the IP address of the virtual machine to be scanned and await the results. <br />
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874371/ss122_t4gd2o.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874373/ss123_acs3fd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874378/ss125_k3ds9l.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874380/ss126_nc8ont.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874382/ss127_db8oly.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874384/ss128_kdq7pu.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 <h3>Post Remediation Scan Results</h3>
