@@ -298,15 +298,17 @@ After Uninstalling these programs as shown in the images above, The next step wo
 <br />
 <h3>Post Remediation Scan Results</h3>
 The result of the scan after remediating the mozilla firefox and vlc media player vulnerabilities showed the following results. The scan results after remediation showed a reduction in the number of severe vulnerabilities compared to the results of the scan before remediation which is due to the removal of the firefox and vlc media player programs causing some of the vulnerabilities. The result of the post remediation scan shows 228 vulnerabilities detected compared to an initial 338 vulnerabilities detected before remediation. <br/ >
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1745878499/ss62_hczytw.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874378/ss125_k3ds9l.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874380/ss126_nc8ont.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874382/ss127_db8oly.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874384/ss128_kdq7pu.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874378/ss125_k3ds9l.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874380/ss126_nc8ont.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874382/ss127_db8oly.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
-<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874384/ss128_kdq7pu.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874386/ss129_u4mxgz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750874389/ss130_cvdhdd.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967359/ss131_n5aqho.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967359/ss132_r8qwsv.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967359/ss133_wdz6oz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967360/ss134_bnv9d2.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967360/ss135_vwvls0.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750969236/ss136_pxmoej.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750969236/ss138_vzrboz.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967360/ss139_dfoj3a.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
+<img src="https://res.cloudinary.com/dbglnqdha/image/upload/v1750967361/ss140_bkpjko.png" height="80%" width="80%" alt="Active Directory Splunk-lab-project"/>
 <br />
 <br />
 </Details>
